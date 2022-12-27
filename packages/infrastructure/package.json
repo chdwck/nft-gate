@@ -1,6 +1,6 @@
 {
   "name": "nft-gate-infrastructure",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "bin": {
     "infrastructure": "bin/infrastructure.js"
@@ -23,7 +23,7 @@
   "dependencies": {
     "aws-cdk-lib": "2.56.1",
     "constructs": "^10.0.0",
-    "nft-gate-api": "^0.0.2",
+    "nft-gate-api": "^0.0.3",
     "source-map-support": "^0.5.21"
   }
 }
