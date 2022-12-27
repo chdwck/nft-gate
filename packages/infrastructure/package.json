@@ -1,6 +1,7 @@
 {
   "name": "nft-gate-infrastructure",
   "version": "0.0.0",
+  "private": true,
   "bin": {
     "infrastructure": "bin/infrastructure.js"
   },
