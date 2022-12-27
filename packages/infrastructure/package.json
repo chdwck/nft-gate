@@ -1,11 +1,11 @@
 {
-  "name": "infrastructure",
+  "name": "nft-gate-infrastructure",
   "version": "0.0.0",
   "bin": {
     "infrastructure": "bin/infrastructure.js"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && cdk synth",
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk"
