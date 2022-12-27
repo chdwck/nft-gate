@@ -1,6 +1,6 @@
 {
   "name": "infrastructure",
-  "version": "0.1.0",
+  "version": "0.0.0",
   "bin": {
     "infrastructure": "bin/infrastructure.js"
   },
@@ -22,7 +22,7 @@
   "dependencies": {
     "aws-cdk-lib": "2.56.1",
     "constructs": "^10.0.0",
-    "source-map-support": "^0.5.21",
-    "nft-gate-api": "0.0.0"
+    "nft-gate-api": "^0.0.0",
+    "source-map-support": "^0.5.21"
   }
 }
