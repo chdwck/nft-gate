@@ -1,0 +1,16 @@
+{
+  "name": "nft-gate",
+  "version": "1.0.0",
+  "description": "Lerna monorepo that allows users to show content to NFT holders",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chdwck",
+  "license": "ISC",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^6.3.0"
+  }
+}
