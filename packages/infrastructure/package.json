@@ -7,9 +7,11 @@
   },
   "scripts": {
     "build": "tsc && cdk synth",
+    "clean": "rimraf lib cdk.out",
     "watch": "tsc -w",
     "test": "jest",
-    "cdk": "cdk"
+    "cdk": "cdk",
+    "deploy": "cdk deploy"
   },
   "devDependencies": {
     "@types/jest": "^29.2.4",
@@ -24,6 +26,7 @@
     "aws-cdk-lib": "2.56.1",
     "constructs": "^10.0.0",
     "nft-gate-api": "^0.0.3",
+    "rimraf": "^3.0.2",
     "source-map-support": "^0.5.21"
   }
 }

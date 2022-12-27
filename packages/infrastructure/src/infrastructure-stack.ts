@@ -1,4 +1,3 @@
-import { handler } from './../../api/src/lambda';
 import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import { LambdaRestApi } from 'aws-cdk-lib/aws-apigateway';
