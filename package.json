@@ -17,5 +17,9 @@
   ],
   "devDependencies": {
     "lerna": "^6.3.0"
+  },
+  "dependencies": {
+    "@aws-cdk/aws-amplify": "^1.184.1",
+    "@aws-cdk/aws-codecommit": "^1.184.1"
   }
 }
