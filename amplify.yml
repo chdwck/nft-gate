@@ -9,10 +9,8 @@ applications:
         build:
           commands:
             - npm run build
-            - cp -a dist/. public/
-            - rm -r dist
       artifacts:
-        baseDirectory: /public
+        baseDirectory: /dist
         files:
           - '*/**'
       cache:
