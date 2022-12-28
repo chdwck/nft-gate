@@ -4,6 +4,7 @@ frontend:
     preBuild:
       commands:
         - cd ./packages/web
+        - npm i
     build:
       commands:
         - npm run build
