@@ -8,5 +8,6 @@ frontend:
       commands:
         - npm run build
   artificats:
-    files:
-      - ./dist/**
+    baseDirectory: dist
+  cache:
+    - node_modules
