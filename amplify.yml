@@ -7,11 +7,8 @@ applications:
           commands:
             - npm i
         build:
-          commands:
-            - npm run build
+          commands: []
       artifacts:
-        baseDirectory: dist
-        discard-paths: yes
         files:
           - '*/**'
       cache:
