@@ -1,11 +1,6 @@
 version: 1
 applications:
   - appRoot: packages/web
-    backend:
-      phases:
-        build:
-          commands:
-            - amplifyPush --simple
     frontend:
       phases:
         preBuild:
