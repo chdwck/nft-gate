@@ -19,11 +19,9 @@ export class AmplifyWeb extends cdk.Construct {
         });
 
         // TODO: use lastest tag
-        const mainBranch = amplifyApp.addBranch('main');
+        amplifyApp.addBranch('main');
 
         amplifyApp.addEnvironment('AMPLIFY_MONOREPO_APP_ROOT', 'packages/web');
-
-        // amplifyApp.addCustomRule(amplify.
 
         amplifyApp.addCustomRule(amplify.CustomRule.SINGLE_PAGE_APPLICATION_REDIRECT);
     }

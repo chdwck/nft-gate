@@ -11,8 +11,9 @@ applications:
             - npm run build
       artifacts:
         baseDirectory: dist
+        discard-paths: yes
         files:
-          - './**'
+          - '*/**'
       cache:
         paths:
           - node_modules/**/*
