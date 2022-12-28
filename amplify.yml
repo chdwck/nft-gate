@@ -9,7 +9,8 @@ applications:
         build:
           commands:
             - npm run build
-            - mv -a dist/. public/
+            - cp -a dist/. public/
+            - rm -r dist
       artifacts:
         baseDirectory: /public
         files:
