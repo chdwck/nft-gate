@@ -1,6 +1,6 @@
 version: 1
 applications:
-  - appRoot: packages/web
+  - appRoot: packages/web2
     backend:
       phases:
         build:
@@ -11,12 +11,12 @@ applications:
       phases:
         preBuild:
           commands:
-            - npm i
+            - npm ci
         build:
           commands:
             - npm run build
       artifacts:
-        baseDirectory: /dist
+        baseDirectory: build
         files:
           - '*/**'
       cache:
