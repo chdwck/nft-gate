@@ -1,13 +1,14 @@
-import * as cdk from 'aws-cdk-lib';
-import { Construct } from 'constructs';
-import { LambdaRestApi } from 'aws-cdk-lib/aws-apigateway';
-import { NodejsFunction } from 'aws-cdk-lib/aws-lambda-nodejs';
-import { Runtime } from 'aws-cdk-lib/aws-lambda';
+import * as cdk from "@aws-cdk/core";
+import { LambdaRestApi } from '@aws-cdk/aws-apigateway';
+import { NodejsFunction } from '@aws-cdk/aws-lambda-nodejs';
+import { Runtime } from '@aws-cdk/aws-lambda';
+
+import { AmplifyWeb } from './amplify-web';
 
 export class InfrastructureStack extends cdk.Stack {
   public readonly apiEndpoint: cdk.CfnOutput;
 
-  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
+  constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     const apiLambdaFunction = new NodejsFunction(this, 'api-function', {
@@ -33,5 +34,7 @@ export class InfrastructureStack extends cdk.Stack {
     this.apiEndpoint = new cdk.CfnOutput(this, 'GatewayURL', {
       value: restApiGateway.url
     })
+
+    new AmplifyWeb(this, 'amplify-web');
   }
 }
