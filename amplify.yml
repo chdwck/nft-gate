@@ -9,8 +9,9 @@ frontend:
       commands:
         - npm run build
   artifacts:
+    baseDirectory: pacakges/web/dist
     files:
       - '*/**'
-    baseDirectory: dist
   cache:
-    - node_modules
+    paths:
+      - node_modules/**/*
