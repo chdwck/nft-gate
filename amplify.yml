@@ -8,9 +8,6 @@ applications:
             - npm i
         build:
           commands: []
-      artifacts:
-        files:
-          - '*/**'
       cache:
         paths:
           - node_modules/**/*
