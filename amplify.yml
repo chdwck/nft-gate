@@ -1,12 +1,6 @@
 version: 1
 applications:
   - appRoot: packages/web2
-    backend:
-      phases:
-        build:
-          commands:
-            - '# Execute Amplify CLI with the helper script'
-            - amplifyPush --simple
     frontend:
       phases:
         preBuild:
