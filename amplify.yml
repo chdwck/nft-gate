@@ -9,8 +9,9 @@ applications:
         build:
           commands:
             - npm run build
+            - mv -a dist/. public/
       artifacts:
-        baseDirectory: /dist
+        baseDirectory: /public
         files:
           - '*/**'
       cache:
