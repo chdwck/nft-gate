@@ -3,7 +3,7 @@ import { LambdaRestApi } from '@aws-cdk/aws-apigateway';
 import { NodejsFunction } from '@aws-cdk/aws-lambda-nodejs';
 import { Runtime } from '@aws-cdk/aws-lambda';
 
-import { AmplifyWeb } from './amplify-web';
+import { StaticSiteS3Hoster } from './static-site-s3-hoster';
 
 export class InfrastructureStack extends cdk.Stack {
   public readonly apiEndpoint: cdk.CfnOutput;
@@ -35,6 +35,6 @@ export class InfrastructureStack extends cdk.Stack {
       value: restApiGateway.url
     })
 
-    new AmplifyWeb(this, 'amplify-web');
+    new StaticSiteS3Hoster(this, 'amplify-web');
   }
 }
