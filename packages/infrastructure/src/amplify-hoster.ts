@@ -1,4 +1,3 @@
-@@ -1,28 +0,0 @@
 import * as cdk from "@aws-cdk/core";
 import * as amplify from "@aws-cdk/aws-amplify";
 
