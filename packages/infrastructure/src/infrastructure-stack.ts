@@ -2,8 +2,11 @@ import * as cdk from "@aws-cdk/core";
 import { LambdaRestApi } from '@aws-cdk/aws-apigateway';
 import { NodejsFunction } from '@aws-cdk/aws-lambda-nodejs';
 import { Runtime } from '@aws-cdk/aws-lambda';
+import { config as dotenvConfig } from "dotenv";
 
-import { StaticSiteS3Hoster } from './static-site-s3-hoster';
+import { AmplifyHoster } from './amplify-hoster';
+
+dotenvConfig();
 
 export class InfrastructureStack extends cdk.Stack {
   public readonly apiEndpoint: cdk.CfnOutput;
@@ -35,6 +38,13 @@ export class InfrastructureStack extends cdk.Stack {
       value: restApiGateway.url
     })
 
-    new StaticSiteS3Hoster(this, 'amplify-web');
+    new AmplifyHoster(this, 'nft-gate-web-app', {
+      githubOwner: 'chdwck',
+      githubRepo: 'nft-gate',
+      packageRoot: 'packages/web',
+      githubOauthToken: cdk.SecretValue.secretsManager(process.env.GITHUB_OAUTH_TOKEN_SECRET_ARN!, {
+        jsonField: 'GITHUB_OAUTH_TOKEN'
+      })
+    });
   }
 }

@@ -22,8 +22,10 @@
     "typescript": "~4.9.4"
   },
   "dependencies": {
+    "@aws-cdk/aws-amplify": "^1.186.0",
     "@aws-cdk/aws-apigateway": "1.186.0",
     "@aws-cdk/aws-lambda-nodejs": "1.186.0",
+    "@aws-cdk/aws-lightsail": "^1.186.0",
     "@aws-cdk/aws-s3": "1.186.0",
     "@aws-cdk/aws-s3-deployment": "1.186.0",
     "aws-cdk": "^2.57.0",

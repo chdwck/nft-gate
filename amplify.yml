@@ -1,0 +1,18 @@
+version: 1
+applications:
+  - frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm i
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: .nuxt
+        files:
+          - '*/**'
+      cache:
+        paths:
+          - node_modules/**/*
+    appRoot: packages/web
