@@ -12,7 +12,7 @@ export class AmplifyHoster extends cdk.Construct {
     constructor(scope: cdk.Construct, id: string, props: AmplifyHosterProps) {
         super(scope, id);
 
-        const amplifyApp = new amplify.App(this, "amplify-hoster-app", {
+        const amplifyApp = new amplify.App(this, `amplify-hoster-app-${id}`, {
             sourceCodeProvider: new amplify.GitHubSourceCodeProvider({
                 owner: props.githubOwner,
                 repository: props.githubRepo,
