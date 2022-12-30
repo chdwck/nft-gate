@@ -1,5 +1,14 @@
 {
+  "name": "nft-gate-web",
+  "version": "0.0.0",
   "private": true,
+  "main": ".output/server/index.mjs",
+  "module": ".output/server/index.mjs",
+  "author": "chdwck <plattwick@gmail.com>",
+  "license": "UNLICENSED",
+  "files": [
+    ".output"
+  ],
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",

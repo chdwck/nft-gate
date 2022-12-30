@@ -24,6 +24,9 @@
   "dependencies": {
     "@aws-cdk/aws-amplify": "^1.186.0",
     "@aws-cdk/aws-apigateway": "1.186.0",
+    "@aws-cdk/aws-ec2": "^1.186.0",
+    "@aws-cdk/aws-ecs": "^1.186.0",
+    "@aws-cdk/aws-ecs-patterns": "^1.186.0",
     "@aws-cdk/aws-lambda-nodejs": "1.186.0",
     "@aws-cdk/aws-lightsail": "^1.186.0",
     "@aws-cdk/aws-s3": "1.186.0",
@@ -31,6 +34,7 @@
     "aws-cdk": "^2.57.0",
     "dotenv": "^16.0.3",
     "nft-gate-api": "^0.0.3",
+    "nft-gate-web": "^0.0.0",
     "rimraf": "^3.0.2",
     "source-map-support": "^0.5.21"
   }

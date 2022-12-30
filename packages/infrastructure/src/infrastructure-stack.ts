@@ -4,7 +4,7 @@ import { NodejsFunction } from '@aws-cdk/aws-lambda-nodejs';
 import { Runtime } from '@aws-cdk/aws-lambda';
 import { config as dotenvConfig } from "dotenv";
 
-import { AmplifyHoster } from './amplify-hoster';
+import { FargateHoster } from './fargate-hoster';
 
 dotenvConfig();
 
@@ -38,13 +38,6 @@ export class InfrastructureStack extends cdk.Stack {
       value: restApiGateway.url
     })
 
-    new AmplifyHoster(this, 'nft-gate-web-app', {
-      githubOwner: 'chdwck',
-      githubRepo: 'nft-gate',
-      packageRoot: 'packages/web',
-      githubOauthToken: cdk.SecretValue.secretsManager(process.env.GITHUB_OAUTH_TOKEN_SECRET_ARN!, {
-        jsonField: 'GITHUB_OAUTH_TOKEN'
-      })
-    });
+    new FargateHoster(this, 'nft-gate', { webPackageName: 'nft-gate-web' });
   }
 }
