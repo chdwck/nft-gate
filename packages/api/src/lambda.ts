@@ -6,7 +6,7 @@ import {
 } from '@nestjs/platform-express';
 import serverlessExpress from '@vendia/serverless-express';
 import express from 'express';
-import { AppModule } from './app.module';
+import { AppModule } from './app/app.module';
 
 let serverlessExpressInstance: Handler;
 
