@@ -7,7 +7,8 @@ import { DockerImageAsset } from "@aws-cdk/aws-ecr-assets";
 const APP_PORT = 3000;
 
 type FargateHosterProps = {
-    webPackageName: string; // Must reference a dockerFile in /fargate-hoster-images
+    webPackageName: string; // Must reference a dockerFile in /fargate-hoster-images,
+    environment?: { [key: string]: string };
 };
 
 export class FargateHoster extends cdk.Construct {
@@ -31,6 +32,7 @@ export class FargateHoster extends cdk.Construct {
         const container = taskDefinition.addContainer(`${id}-fargate-hoster-container`, {
             image,
             logging: ecs.LogDrivers.awsLogs({ streamPrefix: `${id}-fargate-hoster-container` }),
+            environment: props.environment,
         });
 
         container.addPortMappings({ containerPort: APP_PORT });

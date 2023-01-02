@@ -38,6 +38,10 @@ export class InfrastructureStack extends cdk.Stack {
       value: restApiGateway.url
     })
 
-    new FargateHoster(this, 'nft-gate', { webPackageName: 'nft-gate-web' });
+    new FargateHoster(this, 'nft-gate', 
+      { 
+        webPackageName: 'nft-gate-web', 
+        enviroment: { NEST_API_URL: restApiGateway.url } 
+      });
   }
 }
